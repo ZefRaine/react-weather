@@ -1,15 +1,23 @@
-import React from 'react';
+import React from "react";
 
+const api = {
+  key: "1c24c47c116eeebc0c7373bcc9ba723b",
+  base: "https://samples.openweathermap.org/data/2.5/",
+};
 const WeatherCard = (props) => {
-    return (
-        <div className="card">
-        <h1>Sydney</h1>
-        <h3>AU</h3>
-        <img src="" alt="Weather Icon"/>
-        <h1>20 °C</h1>
-        <h3>CLouds</h3>
+  return (
+    <div className="weather-card">
+      <main>
+        <div className="search-box">
+          <input 
+          type="text" 
+          className="search-bar" 
+          placeholder="Search..." 
+          />
         </div>
-    )
-}
+      </main>
+    </div>
+  );
+};
 
-export default WeatherCard 
+export default WeatherCard;

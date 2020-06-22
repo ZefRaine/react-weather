@@ -1,14 +1,56 @@
-.App{
-  margin: 0 auto;
+$hot-bg: url('./assets/hot-bg.jpg');
+$cold-bg: url('./assets/cold-bg.jpg');
+$text-color: #313131;
+$secondary-color: rgba(255, 255, 255, 0.5);
+
+body {
+  font-family: 'monstseratt', sans-serif;
 }
-.card{
-  margin: 0 auto;
-  background: linear-gradient(to top, red, pink);
-  width: 25vw;
-  height: 35vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 15px;
+
+.weather-card {
+  background-image: $cold-bg;
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+}
+
+.weather-card.warm {
+  background-image: $hot-bg;
+}
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rbga(0, 0, 0, .9));
+  padding: 25px;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: $secondary-color;
+  border-radius: 0px 0px 16px 16px;
+  margin-top: -25px;
+
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+  color: $text-color;
+  font-size: 20px;
+
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
 }
